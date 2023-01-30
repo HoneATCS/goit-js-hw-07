@@ -3,9 +3,11 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 const galleryContainer = document.querySelector(".gallery");
+
 const galleryItem = createGalleryItem(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryItem);
+
 galleryContainer.addEventListener("click", onGalleryContainerClick);
 
 const lightbox = new SimpleLightbox(".gallery a", {
